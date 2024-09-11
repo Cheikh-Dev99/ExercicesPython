@@ -7,6 +7,7 @@ print("Trouves le nombre mystère entre 1 et 100 \n")
 def play_game():
     x = random.randint(1, 100)
     nbr_attempts = 0
+
     while True:
         try:
             difficulty = int(input("Choisissez le niveau de difficulté entre : \n"
@@ -31,6 +32,7 @@ def play_game():
                 print("\nVeuillez choisir un niveau de difficulté valide (1, 2, 3, ou 4).")
                 continue
             break
+
         except ValueError:
             print("Veuillez entrer un nombre valide.\n")
 

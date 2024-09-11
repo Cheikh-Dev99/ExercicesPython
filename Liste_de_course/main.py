@@ -31,6 +31,9 @@ while True:
             e = input("Entrez le nom de l'élément à retirer : ")
             if e in listes:
                 confirmation = input(f"Êtes-vous sûr de vouloir retirer '{e}' ? (o/n) : ").lower()
+                while confirmation != 'o' and confirmation != 'n':
+                    confirmation = input(f"Si vous vouler retirer {e}, vous devez confirmer par 'o' ou 'n' : ")
+
                 if confirmation == 'o':
                     listes.remove(e)
                     print(f"L'élément '{e}' a été retiré de la liste.")
